@@ -13,6 +13,7 @@ import WebDevelopmentPage2 from '@/components/sections/WebDevelopmentPage2'
 import WebDevelopmentPage3 from '@/components/sections/WebDevelopmentPage3'
 import WebDevelopmentPage4 from '@/components/sections/WebDevelopmentPage4'
 import WebDevelopmentPage5 from '@/components/sections/WebDevelopmentPage5'
+import WebDevelopmentPage6 from '@/components/sections/WebDevelopmentPage6'
 
 export default function Home() {
   const [active, setActive] = useState('home')
@@ -80,6 +81,7 @@ export default function Home() {
       <WebDevelopmentPage3 />
       <WebDevelopmentPage4 />
       <WebDevelopmentPage5 />
+      <WebDevelopmentPage6 />
     </main>
   )
 }
