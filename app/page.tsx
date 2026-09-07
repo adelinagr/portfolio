@@ -16,6 +16,7 @@ import WebDevelopmentPage5 from '@/components/sections/WebDevelopmentPage5'
 import WebDevelopmentPage6 from '@/components/sections/WebDevelopmentPage6'
 import WebDevelopmentPage7 from '@/components/sections/WebDevelopmentPage7'
 import VogueGlitch from '@/components/sections/VogueGlitch'
+import TwinGridPage1 from '@/components/sections/TwinGridPage1'
 
 export default function Home() {
   const [active, setActive] = useState('home')
@@ -88,6 +89,7 @@ export default function Home() {
       <WebDevelopmentPage6 />
       <WebDevelopmentPage7 />
       <VogueGlitch />
+      <TwinGridPage1 />
     </main>
   )
 }
