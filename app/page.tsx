@@ -10,6 +10,7 @@ import StudentVibesPage2 from '@/components/sections/StudentVibesPage2'
 import StudentVibesPage3 from '@/components/sections/StudentVibesPage3'
 import WebDevelopmentPage1 from '@/components/sections/WebDevelopmentPage1'
 import WebDevelopmentPage2 from '@/components/sections/WebDevelopmentPage2'
+import WebDevelopmentPage3 from '@/components/sections/WebDevelopmentPage3'
 
 export default function Home() {
   const [active, setActive] = useState('home')
@@ -74,6 +75,7 @@ export default function Home() {
       <StudentVibesPage3 />
       <WebDevelopmentPage1 />
       <WebDevelopmentPage2 />
+      <WebDevelopmentPage3 />
     </main>
   )
 }
