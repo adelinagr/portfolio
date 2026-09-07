@@ -8,8 +8,8 @@ export default function AboutSection() {
         <div className="leopard-list">learning Chinese<br />making things unnecessarily pretty<br />falling into random research rabbit holes<br />overthinking everything</div>
       </article>
       <article className="burgundy-card">I&apos;m currently exploring<br />Product Design, UX, AI<br />and Cybersecurity —<br />because apparently<br />choosing one field<br />wasn&apos;t enough.</article>
-      <p className="about-body">During my Web Development internship, I discovered that the part I<br />genuinely enjoyed wasn&apos;t sitting there writing code.<br />It was figuring out how things should look, what users might need,<br />which components made sense, and how to turn an idea into<br />something that actually feels good to use.</p>
-      <p className="about-statement">I like good interfaces, thoughtful details, interesting problems, and<br />figuring out why something doesn&apos;t work when it very obviously should.</p>
+      <p className="about-body">During my Web Development internship, I discovered that the part I genuinely enjoyed wasn&apos;t sitting there writing code. It was figuring out how things should look, what users might need, which components made sense, and how to turn an idea into something that actually feels good to use.</p>
+      <p className="about-statement">I like good interfaces, thoughtful details, interesting problems, and <span className="hidden md:inline"><br/></span>figuring out why something doesn&apos;t work when it very obviously should.</p>
     </section>
   )
 }
