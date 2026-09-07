@@ -15,6 +15,7 @@ import WebDevelopmentPage4 from '@/components/sections/WebDevelopmentPage4'
 import WebDevelopmentPage5 from '@/components/sections/WebDevelopmentPage5'
 import WebDevelopmentPage6 from '@/components/sections/WebDevelopmentPage6'
 import WebDevelopmentPage7 from '@/components/sections/WebDevelopmentPage7'
+import VogueGlitch from '@/components/sections/VogueGlitch'
 
 export default function Home() {
   const [active, setActive] = useState('home')
@@ -28,7 +29,7 @@ export default function Home() {
       const explicitKey = section.dataset.navSection
       if (explicitKey) return explicitKey
       const id = section.id.toLowerCase()
-      if (id.includes('work') || id.includes('studentvibes') || id.includes('web-development') || id.includes('twingrid') || id.includes('cybersafe')) return 'work'
+      if (id.includes('work') || id.includes('studentvibes') || id.includes('web-development') || id.includes('vogueglitch') || id.includes('twingrid') || id.includes('cybersafe')) return 'work'
       return id
     }
 
@@ -44,7 +45,9 @@ export default function Home() {
       const nextActive = sectionKey(current)
       setActive(nextActive)
       
-      const isInteriorPage = /-\d+$/.test(current.id)
+      const projectFirstPages = ['studentvibes', 'web-development', 'vogueglitch', 'twingrid', 'cybersafe']
+      const isCaseStudy = ['studentvibes', 'web-development', 'vogueglitch', 'twingrid', 'cybersafe'].some(prefix => current.id.startsWith(prefix))
+      const isInteriorPage = isCaseStudy && !projectFirstPages.includes(current.id)
       setNavHidden(isInteriorPage)
 
       document.querySelectorAll<HTMLAnchorElement>('.site-nav a').forEach((link) => {
@@ -84,6 +87,7 @@ export default function Home() {
       <WebDevelopmentPage5 />
       <WebDevelopmentPage6 />
       <WebDevelopmentPage7 />
+      <VogueGlitch />
     </main>
   )
 }
