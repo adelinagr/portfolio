@@ -5,6 +5,7 @@ import SiteNav from '@/components/SiteNav'
 import HomeSection from '@/components/sections/HomeSection'
 import AboutSection from '@/components/sections/AboutSection'
 import WorkSection from '@/components/sections/WorkSection'
+import StudentVibesSection from '@/components/sections/StudentVibesSection'
 
 export default function Home() {
   const [active, setActive] = useState('home')
@@ -57,6 +58,7 @@ export default function Home() {
       <HomeSection />
       <AboutSection />
       <WorkSection />
+      <StudentVibesSection />
     </main>
   )
 }

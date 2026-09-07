@@ -248,7 +248,6 @@
 .site-nav a.is-active { color: #F3A0AA; font-size: 1.25em; }
 .site-nav .nav-name.is-active { font-size: clamp(1.45rem, 1.9vw, 2.1rem); }
 
-.work-view { position: relative; min-height: 100svh; overflow: hidden; background: #F8E5D7; color: #000; font-family: var(--font-editorial), serif; }
 .work-view { position: relative; width: 100%; height: 100svh; min-height: 0; overflow: hidden; background: #F8E5D7; color: #000; font-family: var(--font-editorial), serif; }
 
 .work-asset { position: absolute; z-index: 2; display: block; transition: transform .2s ease; }
@@ -261,7 +260,13 @@
 .asset-web { left: 67%; top: 4%; width: 25%; }
 .asset-twingrid { left: 21.5%; top: 61%; width: 23%; }
 .asset-cybersafe { left: 57%; top: 59%; width: 29%; }
+.studentvibes-view { position: relative; width: 100%; height: 100svh; min-height: 0; overflow: hidden; background: #F8E5D7; color: #000; }
+.sv-asset { position: absolute; display: block; z-index: 2; }
+.sv-asset img { display: block; width: 100%; height: auto; }
 
+.sv-text-group { left: 28%; top: 7%; width: 65%; z-index: 3; }
+.sv-myrole { left: 15.5%; top: 51%; width: 29%; }
+.sv-visual-cluster { left: 54%; top: 51%; width: 35%; }
 
 
 /* RESPONSIVE OVERRIDES */
@@ -275,6 +280,6 @@
   .leopard-panel { min-height: 18rem; }
   .leopard-list { right: 1.5rem; bottom: 1.5rem; }
 
-  .work-view { height: auto; min-height: 120svh; padding: 6rem 2rem 4rem; overflow: auto; }
-  .work-asset, .work-title-group { position: relative; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important; width: 100% !important; margin-bottom: 4rem; transform: none !important; }
+  .work-view, .studentvibes-view { height: auto; min-height: 120svh; padding: 6rem 2rem 4rem; overflow: auto; }
+  .work-asset, .work-title-group, .sv-asset { position: relative; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important; width: 100% !important; margin-bottom: 4rem; transform: none !important; }
 }
