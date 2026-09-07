@@ -7,6 +7,8 @@ import AboutSection from '@/components/sections/AboutSection'
 import WorkSection from '@/components/sections/WorkSection'
 import StudentVibesSection from '@/components/sections/StudentVibesSection'
 import StudentVibesPage2 from '@/components/sections/StudentVibesPage2'
+import StudentVibesPage3 from '@/components/sections/StudentVibesPage3'
+import WebDevelopmentPage1 from '@/components/sections/WebDevelopmentPage1'
 
 export default function Home() {
   const [active, setActive] = useState('home')
@@ -36,8 +38,8 @@ export default function Home() {
       const nextActive = sectionKey(current)
       setActive(nextActive)
       
-      const shouldHideNav = current.id !== 'studentvibes' && current.id.includes('studentvibes')
-      setNavHidden(shouldHideNav)
+      const isInteriorPage = /-\d+$/.test(current.id)
+      setNavHidden(isInteriorPage)
 
       document.querySelectorAll<HTMLAnchorElement>('.site-nav a').forEach((link) => {
         const isActive = link.getAttribute('href') === `#${nextActive}`
@@ -68,6 +70,8 @@ export default function Home() {
       <WorkSection />
       <StudentVibesSection />
       <StudentVibesPage2 />
+      <StudentVibesPage3 />
+      <WebDevelopmentPage1 />
     </main>
   )
 }
