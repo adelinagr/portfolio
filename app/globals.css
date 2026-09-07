@@ -191,6 +191,13 @@
   border-radius: 2.5rem;
   background: #6B4E3A;
   box-shadow: .5rem .65rem 1.2rem rgba(243, 160, 170, .72), 0 0 1rem rgba(243, 160, 170, .62), 0 .25rem .5rem rgba(243, 160, 170, .5);
+  transition: all 0.4s ease;
+}
+
+.site-nav.is-hidden {
+  opacity: 0;
+  transform: translateY(-50%) translateX(-30px);
+  pointer-events: none;
 }
 
 .site-nav nav { display: flex; width: 100%; flex-direction: column; align-items: center; justify-content: space-between; gap: 0; height: 100%; }
@@ -268,6 +275,27 @@
 .sv-myrole { left: 15.5%; top: 51%; width: 29%; }
 .sv-visual-cluster { left: 54%; top: 51%; width: 35%; }
 
+.studentvibes-page2-view { position: relative; width: 100%; height: 100svh; min-height: 0; overflow: hidden; background: #F8E5D7; color: #000; }
+.sv2-stage {
+  position: absolute;
+  aspect-ratio: 16 / 9;
+  height: min(100%, calc(100vw * 9 / 16));
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sv2-asset { position: absolute; display: block; z-index: 2; }
+.sv2-asset img { display: block; width: 100%; height: auto; }
+
+.sv2-visual-identity { left: 2.5%; top: 6%; width: 47%; }
+.sv2-logos { left: 53%; top: 4.5%; width: 41.5%; }
+.sv2-backgrounds { left: 5.3%; top: 30%; width: 40%; }
+.sv2-content-branding { left: 52%; top: 77%; width: 46%; }
+
 
 /* RESPONSIVE OVERRIDES */
 @media (max-width: 900px) {
@@ -280,6 +308,6 @@
   .leopard-panel { min-height: 18rem; }
   .leopard-list { right: 1.5rem; bottom: 1.5rem; }
 
-  .work-view, .studentvibes-view { height: auto; min-height: 120svh; padding: 6rem 2rem 4rem; overflow: auto; }
-  .work-asset, .work-title-group, .sv-asset { position: relative; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important; width: 100% !important; margin-bottom: 4rem; transform: none !important; }
+  .work-view, .studentvibes-view, .studentvibes-page2-view { height: auto; min-height: 120svh; padding: 6rem 2rem 4rem; overflow: auto; }
+  .work-asset, .work-title-group, .sv-asset, .sv2-asset { position: relative; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important; width: 100% !important; margin-bottom: 4rem; transform: none !important; }
 }

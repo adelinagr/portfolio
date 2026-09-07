@@ -6,9 +6,12 @@ import HomeSection from '@/components/sections/HomeSection'
 import AboutSection from '@/components/sections/AboutSection'
 import WorkSection from '@/components/sections/WorkSection'
 import StudentVibesSection from '@/components/sections/StudentVibesSection'
+import StudentVibesPage2 from '@/components/sections/StudentVibesPage2'
 
 export default function Home() {
   const [active, setActive] = useState('home')
+  const [navHidden, setNavHidden] = useState(false)
+  
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-nav-section]'))
     if (!sections.length) return
@@ -29,8 +32,13 @@ export default function Home() {
         const sectionTop = section.getBoundingClientRect().top + scrollTop
         if (sectionTop <= marker) current = section
       }
+      
       const nextActive = sectionKey(current)
       setActive(nextActive)
+      
+      const shouldHideNav = current.id !== 'studentvibes' && current.id.includes('studentvibes')
+      setNavHidden(shouldHideNav)
+
       document.querySelectorAll<HTMLAnchorElement>('.site-nav a').forEach((link) => {
         const isActive = link.getAttribute('href') === `#${nextActive}`
         link.classList.toggle('is-active', isActive)
@@ -54,11 +62,12 @@ export default function Home() {
 
   return (
     <main className="home-shell font-serif">
-      <SiteNav active={active} />
+      <SiteNav active={active} hidden={navHidden} />
       <HomeSection />
       <AboutSection />
       <WorkSection />
       <StudentVibesSection />
+      <StudentVibesPage2 />
     </main>
   )
 }
