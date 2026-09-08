@@ -17,6 +17,8 @@ import WebDevelopmentPage6 from '@/components/sections/WebDevelopmentPage6'
 import WebDevelopmentPage7 from '@/components/sections/WebDevelopmentPage7'
 import VogueGlitch from '@/components/sections/VogueGlitch'
 import TwinGridPage1 from '@/components/sections/TwinGridPage1'
+import TwinGridPage2 from '@/components/sections/TwinGridPage2'
+import TwinGridPage3 from '@/components/sections/TwinGridPage3'
 
 export default function Home() {
   const [active, setActive] = useState('home')
@@ -46,9 +48,7 @@ export default function Home() {
       const nextActive = sectionKey(current)
       setActive(nextActive)
       
-      const projectFirstPages = ['studentvibes', 'web-development', 'vogueglitch', 'twingrid', 'cybersafe']
-      const isCaseStudy = ['studentvibes', 'web-development', 'vogueglitch', 'twingrid', 'cybersafe'].some(prefix => current.id.startsWith(prefix))
-      const isInteriorPage = isCaseStudy && !projectFirstPages.includes(current.id)
+      const isInteriorPage = /-\d+$/.test(current.id)
       setNavHidden(isInteriorPage)
 
       document.querySelectorAll<HTMLAnchorElement>('.site-nav a').forEach((link) => {
@@ -90,6 +90,8 @@ export default function Home() {
       <WebDevelopmentPage7 />
       <VogueGlitch />
       <TwinGridPage1 />
+      <TwinGridPage2 />
+      <TwinGridPage3 />
     </main>
   )
 }
