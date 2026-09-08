@@ -20,6 +20,7 @@ import TwinGridPage1 from '@/components/sections/TwinGridPage1'
 import TwinGridPage2 from '@/components/sections/TwinGridPage2'
 import TwinGridPage3 from '@/components/sections/TwinGridPage3'
 import TwinGridPage4 from '@/components/sections/TwinGridPage4'
+import CyberSafePage1 from '@/components/sections/CyberSafePage1'
 
 export default function Home() {
   const [active, setActive] = useState('home')
@@ -94,6 +95,7 @@ export default function Home() {
       <TwinGridPage2 />
       <TwinGridPage3 />
       <TwinGridPage4 />
+      <CyberSafePage1 />
     </main>
   )
 }
