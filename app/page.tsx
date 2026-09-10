@@ -57,6 +57,15 @@ export default function Home() {
       const isInteriorPage = /-\d+$/.test(current.id)
       setNavHidden(isInteriorPage)
 
+      const projectHash = current.id.replace(/-\d+$/, '')
+      const targetHash = projectHash === 'home' ? '' : `#${projectHash}`
+      
+      if (window.location.hash !== targetHash) {
+        if (targetHash || window.location.hash) {
+          window.history.replaceState(null, '', targetHash || window.location.pathname)
+        }
+      }
+
       document.querySelectorAll<HTMLAnchorElement>('.site-nav a').forEach((link) => {
         const isActive = link.getAttribute('href') === `#${nextActive}`
         link.classList.toggle('is-active', isActive)
