@@ -306,8 +306,9 @@
 .wd1-title { left: 0; top: 0; width: 100%; }
 .wd1-text { left: 17%; top: 33%; width: 70%; }
 
-.webdev-page2-view, .webdev-page3-view, .webdev-page4-view, .webdev-page5-view, .webdev-page6-view, .webdev-page7-view, .vogueglitch-view, .twingrid-page1-view, .twingrid-page2-view, .twingrid-page3-view, .twingrid-page4-view, .cybersafe-page1-view, .cybersafe-page2-view { position: relative; width: 100%; height: 100svh; min-height: 0; overflow: hidden; background: #F8E5D7; color: #000; }
-.wd2-asset, .wd3-asset, .wd4-asset, .wd5-asset, .wd6-asset, .wd7-asset, .vg-asset, .tg1-asset, .tg2-asset, .tg3-asset, .tg4-asset, .cs1-main-asset, .cs1-decor-asset, .cs2-asset { position: absolute; display: block; z-index: 2; }
+.webdev-page2-view, .webdev-page3-view, .webdev-page4-view, .webdev-page5-view, .webdev-page6-view, .webdev-page7-view, .vogueglitch-view, .twingrid-page1-view, .twingrid-page2-view, .twingrid-page3-view, .twingrid-page4-view, .cybersafe-page1-view, .cybersafe-page2-view, .skills-view, .contact-page2-view { position: relative; width: 100%; height: 100svh; min-height: 0; overflow: hidden; background: #F8E5D7; color: #000; }
+.contact-view { position: relative; width: 100%; height: 100svh; min-height: 0; overflow: hidden; background: #F8E5D7; color: #000; display: flex; align-items: center; justify-content: center; }
+.wd2-asset, .wd3-asset, .wd4-asset, .wd5-asset, .wd6-asset, .wd7-asset, .vg-asset, .tg1-asset, .tg2-asset, .tg3-asset, .tg4-asset, .cs1-main-asset, .cs1-decor-asset, .cs2-asset, .skills-asset, .contact-asset, .contact2-asset { position: absolute; display: block; z-index: 2; }
 .wd2-asset img { display: block; width: 100%; height: auto; }
 .wd3-asset img { display: block; width: 100%; height: 100%; }
 .wd4-asset img { display: block; width: 100%; height: auto; }
@@ -319,7 +320,7 @@
 .tg2-asset img { display: block; width: 100%; height: auto; }
 .tg3-asset img { display: block; width: 100%; height: 100%; }
 .tg4-asset img { display: block; width: 100%; height: 100%; }
-.cs1-main-asset img, .cs1-decor-asset img, .cs2-asset img { display: block; width: 100%; height: auto; }
+.cs1-main-asset img, .cs1-decor-asset img, .cs2-asset img, .skills-asset img, .contact2-asset img { display: block; width: 100%; height: auto; }
 
 .wd2-composition { left: 2%; top: 2%; width: 96%; }
 .wd3-composition { left: -6%; top: 3%; width: 112%; height: 94%; }
@@ -339,6 +340,22 @@
 .cs2-text-composition { left: 2%; bottom: 4%; width: 60%; }
 .cs2-upright-composition { left: 68%; top: 5%; width: 31%; }
 .cs2-downright-composition { right: 0%; bottom: 6%; width: 19%; }
+.skills-composition { left: 17%; top: 5%; width: 74%; height: auto; }
+.contact2-composition { left: 0; top: 0; width: 100%; height: 100%; }
+.contact2-composition img { height: 100%; object-fit: contain; }
+.contact-stage {
+  position: relative;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+  width: min(100vw, calc(100svh * 16 / 9));
+  height: min(100svh, calc(100vw * 9 / 16));
+}
+.contact-artwork { position: absolute; left: 29.5%; top: 4%; width: 61%; }
+.contact-artwork-image { display: block; width: 100%; height: auto; pointer-events: none; }
+.contact-hit { position: absolute; display: block; background: transparent; cursor: pointer; z-index: 20; pointer-events: auto; }
+.contact-hit-email { left: 11%; top: 48.2%; width: 29%; height: 3.8%; }
+.contact-hit-linkedin { left: 64%; top: 61.8%; width: 17%; height: 3.8%; }
+.contact-hit-cv { left: 11%; top: 70.8%; width: 16%; height: 3.8%; }
 
 /* RESPONSIVE OVERRIDES */
 @media (max-width: 900px) {
@@ -351,6 +368,6 @@
   .leopard-panel { min-height: 18rem; }
   .leopard-list { right: 1.5rem; bottom: 1.5rem; }
 
-  .work-view, .studentvibes-view, .studentvibes-page2-view, .studentvibes-page3-view, .webdev-page1-view, .webdev-page2-view, .webdev-page3-view, .webdev-page4-view, .webdev-page5-view, .webdev-page6-view, .webdev-page7-view, .vogueglitch-view, .twingrid-page1-view, .twingrid-page2-view, .twingrid-page3-view, .twingrid-page4-view, .cybersafe-page1-view, .cybersafe-page2-view { height: auto; min-height: 120svh; padding: 6rem 2rem 4rem; overflow: auto; }
-  .work-asset, .work-title-group, .sv-asset, .sv2-asset, .sv3-asset, .wd1-asset, .wd2-asset, .wd3-asset, .wd4-asset, .wd5-asset, .wd6-asset, .wd7-asset, .vg-asset, .tg1-asset, .tg2-asset, .tg3-asset, .tg4-asset, .cs1-main-asset, .cs1-decor-asset, .cs2-asset { position: relative; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important; width: 100% !important; margin-bottom: 4rem; transform: none !important; }
+  .work-view, .studentvibes-view, .studentvibes-page2-view, .studentvibes-page3-view, .webdev-page1-view, .webdev-page2-view, .webdev-page3-view, .webdev-page4-view, .webdev-page5-view, .webdev-page6-view, .webdev-page7-view, .vogueglitch-view, .twingrid-page1-view, .twingrid-page2-view, .twingrid-page3-view, .twingrid-page4-view, .cybersafe-page1-view, .cybersafe-page2-view, .skills-view, .contact-view, .contact-page2-view { height: auto; min-height: 120svh; padding: 6rem 2rem 4rem; overflow: auto; }
+  .work-asset, .work-title-group, .sv-asset, .sv2-asset, .sv3-asset, .wd1-asset, .wd2-asset, .wd3-asset, .wd4-asset, .wd5-asset, .wd6-asset, .wd7-asset, .vg-asset, .tg1-asset, .tg2-asset, .tg3-asset, .tg4-asset, .cs1-main-asset, .cs1-decor-asset, .cs2-asset, .skills-asset, .contact-asset, .contact2-asset { position: relative; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important; width: 100% !important; margin-bottom: 4rem; transform: none !important; }
 }
