@@ -46,7 +46,7 @@ export default function RootLayout({
     <html lang="en" className={`${display.variable} ${editorial.variable}`}>
       <body className="font-serif antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <Analytics />
       </body>
     </html>
   )
